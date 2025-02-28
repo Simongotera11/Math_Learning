@@ -1,0 +1,66 @@
+{
+  "topics": [
+    {
+      "title": "Vectors and Matrices",
+      "subtopics": [
+        { "id": "1.1", "title": "Vectors, Length and Direction" },
+        { "id": "1.2", "title": "Dot and Cross Product" },
+        { "id": "1.3", "title": "Linear Combinations and Span" },
+        { "id": "1.4", "title": "Matrices and Matrix Operations" },
+        { "id": "1.5", "title": "Higher Dimensional Matrices" },
+        { "id": "1.6", "title": "Projections" }
+      ]
+    },
+    {
+      "title": "Calculus",
+      "subtopics": [
+        { "id": "2.1", "title": "Limits and Continuity" },
+        { "id": "2.2", "title": "Derivatives and Differentiation Rules" },
+        { "id": "2.3", "title": "Applications of Derivatives" },
+        { "id": "2.4", "title": "Integration and Antiderivatives" },
+        { "id": "2.5", "title": "Applications of Integrals" },
+        { "id": "2.6", "title": "Series and Sequences" }
+      ]
+    },
+    {
+      "title": "Probability and Statistics",
+      "subtopics": [
+        { "id": "3.1", "title": "Basic Probability Concepts" },
+        { "id": "3.2", "title": "Random Variables and Distributions" },
+        { "id": "3.3", "title": "Expectation and Variance" },
+        { "id": "3.4", "title": "Hypothesis Testing" },
+        { "id": "3.5", "title": "Regression and Correlation" }
+      ]
+    },
+    {
+      "title": "Linear Algebra",
+      "subtopics": [
+        { "id": "4.1", "title": "Vector Spaces" },
+        { "id": "4.2", "title": "Basis and Dimension" },
+        { "id": "4.3", "title": "Eigenvalues and Eigenvectors" },
+        { "id": "4.4", "title": "Orthogonality and Least Squares" },
+        { "id": "4.5", "title": "Diagonalization and Similarity" }
+      ]
+    },
+    {
+      "title": "Differential Equations",
+      "subtopics": [
+        { "id": "5.1", "title": "First-Order Differential Equations" },
+        { "id": "5.2", "title": "Second-Order Differential Equations" },
+        { "id": "5.3", "title": "Systems of Differential Equations" },
+        { "id": "5.4", "title": "Laplace Transforms" },
+        { "id": "5.5", "title": "Fourier Series" }
+      ]
+    },
+    {
+      "title": "Discrete Mathematics",
+      "subtopics": [
+        { "id": "6.1", "title": "Logic and Proofs" },
+        { "id": "6.2", "title": "Set Theory" },
+        { "id": "6.3", "title": "Combinatorics" },
+        { "id": "6.4", "title": "Graph Theory" },
+        { "id": "6.5", "title": "Recurrence Relations" }
+      ]
+    }
+  ]
+}
