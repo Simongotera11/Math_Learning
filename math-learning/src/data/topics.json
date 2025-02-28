@@ -3,63 +3,191 @@
     {
       "title": "Vectors and Matrices",
       "subtopics": [
-        { "id": "1.1", "title": "Vectors, Length and Direction" },
-        { "id": "1.2", "title": "Dot and Cross Product" },
-        { "id": "1.3", "title": "Linear Combinations and Span" },
-        { "id": "1.4", "title": "Matrices and Matrix Operations" },
-        { "id": "1.5", "title": "Higher Dimensional Matrices" },
-        { "id": "1.6", "title": "Projections" }
+        { 
+          "id": "1.1", 
+          "title": "Vectors, Length and Direction",
+          "content": "Vectors are quantities that have both magnitude and direction. The length (or magnitude) of a vector \\( \\mathbf{v} = (v_1, v_2, \\dots, v_n) \\) is calculated using the Euclidean norm:\n\n$$ \\| \\mathbf{v} \\| = \\sqrt{v_1^2 + v_2^2 + \\dots + v_n^2} $$\n\nDirection is often represented in terms of angles or unit vectors."
+        },
+        { 
+          "id": "1.2", 
+          "title": "Dot and Cross Product",
+          "content": "The dot product of two vectors \\( \\mathbf{a} \\) and \\( \\mathbf{b} \\) is defined as:\n\n$$ \\mathbf{a} \\cdot \\mathbf{b} = \\sum_{i=1}^n a_i b_i $$\n\nIt results in a scalar and is used to determine the angle between vectors. The cross product, defined in 3D space, results in a vector perpendicular to the plane containing \\( \\mathbf{a} \\) and \\( \\mathbf{b} \\):\n\n$$ \\mathbf{a} \\times \\mathbf{b} = \\begin{vmatrix} \\mathbf{i} & \\mathbf{j} & \\mathbf{k} \\\\ a_1 & a_2 & a_3 \\\\ b_1 & b_2 & b_3 \\end{vmatrix} $$"
+        },
+        { 
+          "id": "1.3", 
+          "title": "Linear Combinations and Span",
+          "content": "A linear combination of vectors \\( \\mathbf{v}_1, \\mathbf{v}_2, \\dots, \\mathbf{v}_k \\) is defined as:\n\n$$ c_1 \\mathbf{v}_1 + c_2 \\mathbf{v}_2 + \\dots + c_k \\mathbf{v}_k $$\n\nwhere \\( c_1, c_2, \\dots, c_k \\) are scalars. The span of a set of vectors is the set of all possible linear combinations of those vectors, often representing a plane or space."
+        },
+        { 
+          "id": "1.4", 
+          "title": "Matrices and Matrix Operations",
+          "content": "Matrices are rectangular arrays of numbers used to represent linear transformations. For two matrices \\( A \\) and \\( B \\), addition and multiplication are defined as:\n\n$$ A + B = [a_{ij} + b_{ij}] $$\n\n$$ AB = \\left[ \\sum_{k=1}^n a_{ik} b_{kj} \\right] $$\n\nThe determinant of a matrix \\( A \\), denoted \\( \\det(A) \\), is useful in solving systems of linear equations."
+        },
+        { 
+          "id": "1.5", 
+          "title": "Higher Dimensional Matrices",
+          "content": "Higher dimensional matrices extend the concept of 2D matrices to three or more dimensions. For example, a 3D matrix \\( A \\) can be represented as \\( A = [a_{ijk}] \\), where \\( i, j, k \\) are indices. These are used in advanced applications like tensor analysis and multi-linear algebra."
+        },
+        { 
+          "id": "1.6", 
+          "title": "Projections",
+          "content": "The projection of a vector \\( \\mathbf{v} \\) onto a subspace spanned by \\( \\mathbf{u} \\) is given by:\n\n$$ \\text{proj}_{\\mathbf{u}} \\mathbf{v} = \\frac{\\mathbf{v} \\cdot \\mathbf{u}}{\\| \\mathbf{u} \\|^2} \\mathbf{u} $$\n\nProjections are essential in applications like computer graphics and least squares fitting."
+        }
       ]
     },
     {
       "title": "Calculus",
       "subtopics": [
-        { "id": "2.1", "title": "Limits and Continuity" },
-        { "id": "2.2", "title": "Derivatives and Differentiation Rules" },
-        { "id": "2.3", "title": "Applications of Derivatives" },
-        { "id": "2.4", "title": "Integration and Antiderivatives" },
-        { "id": "2.5", "title": "Applications of Integrals" },
-        { "id": "2.6", "title": "Series and Sequences" }
+        {
+           "id": "2.1", 
+           "title": "Limits and Continuity",
+           "content": "A limit describes the value a function approaches as the input approaches a certain point. The mathematical definition of a limit is:\n\n$$ \\lim_{x \\to a} f(x) = L $$\n\nA function is continuous at a point \\( a \\) if:\n\n1. \\( f(a) \\) is defined.\n2. \\( \\lim_{x \\to a} f(x) \\) exists.\n3. \\( \\lim_{x \\to a} f(x) = f(a) \\).\n\nContinuity ensures smooth, unbroken graphs."
+        },
+        { 
+          "id": "2.2",
+          "title": "Derivatives and Differentiation Rules",
+          "content": "The derivative measures the rate of change of a function and is defined as:\n\n$$ f'(x) = \\lim_{h \\to 0} \\frac{f(x+h) - f(x)}{h} $$\n\nCommon differentiation rules include:\n\n- **Power Rule**: \\( \\frac{d}{dx} x^n = n x^{n-1} \\)\n- **Product Rule**: \\( (fg)' = f'g + fg' \\)\n- **Quotient Rule**: \\( \\left( \\frac{f}{g} \\right)' = \\frac{f'g - fg'}{g^2} \\)\n- **Chain Rule**: \\( (f(g(x)))' = f'(g(x)) g'(x) \\)\n\nDerivatives are essential in optimization and motion analysis."
+        },
+        { 
+          "id": "2.3", 
+          "title": "Applications of Derivatives",
+          "content": "Derivatives are used to find the slope of a curve, optimize functions, and analyze motion. For example, the second derivative \\( f''(x) \\) determines concavity:\n\n$$ f''(x) > 0 \\Rightarrow \\text{Concave Up} $$\n\n$$ f''(x) < 0 \\Rightarrow \\text{Concave Down} $$"
+        },
+        { 
+          "id": "2.4", 
+          "title": "Integration and Antiderivatives",
+          "content": "Integration is the process of finding the antiderivative of a function. The definite integral of \\( f(x) \\) from \\( a \\) to \\( b \\) is:\n\n$$ \\int_a^b f(x) \\, dx = F(b) - F(a) $$\n\nwhere \\( F(x) \\) is the antiderivative of \\( f(x) \\)."
+        },
+        { 
+          "id": "2.5", 
+          "title": "Applications of Integrals",
+          "content": "Integrals are used to calculate areas under curves, volumes of solids of revolution, and work done by a force. For example, the area under \\( f(x) \\) from \\( a \\) to \\( b \\) is:\n\n$$ \\text{Area} = \\int_a^b f(x) \\, dx $$"
+        },
+        { 
+          "id": "2.6", 
+          "title": "Series and Sequences",
+          "content": "A sequence is an ordered list of numbers, while a series is the sum of a sequence. For example, the sum of an infinite geometric series is:\n\n$$ S = \\sum_{n=0}^\\infty ar^n = \\frac{a}{1 - r} \\quad \\text{for} \\ |r| < 1 $$"
+        }
       ]
     },
     {
       "title": "Probability and Statistics",
       "subtopics": [
-        { "id": "3.1", "title": "Basic Probability Concepts" },
-        { "id": "3.2", "title": "Random Variables and Distributions" },
-        { "id": "3.3", "title": "Expectation and Variance" },
-        { "id": "3.4", "title": "Hypothesis Testing" },
-        { "id": "3.5", "title": "Regression and Correlation" }
+        { 
+          "id": "3.1", 
+          "title": "Basic Probability Concepts",
+          "content": "Probability measures the likelihood of an event. The probability of an event \\( A \\) is:\n\n$$ P(A) = \\frac{\\text{Number of favorable outcomes}}{\\text{Total number of outcomes}} $$"
+        },
+        { 
+          "id": "3.2", 
+          "title": "Random Variables and Distributions",
+          "content": "A random variable \\( X \\) assigns numerical values to outcomes. The probability distribution of \\( X \\) is:\n\n$$ P(X = x) = p(x) $$\n\nCommon distributions include the binomial and normal distributions."
+        },
+        { 
+          "id": "3.3", 
+          "title": "Expectation and Variance",
+          "content": "The expectation (mean) of a random variable \\( X \\) is:\n\n$$ E(X) = \\sum x \\cdot p(x) $$\n\nThe variance measures the spread of \\( X \\):\n\n$$ \\text{Var}(X) = E(X^2) - [E(X)]^2 $$"
+        },
+        { 
+          "id": "3.4", 
+          "title": "Hypothesis Testing",
+          "content": "Hypothesis testing involves testing a claim about a population parameter. The test statistic \\( Z \\) is:\n\n$$ Z = \\frac{\\bar{X} - \\mu}{\\sigma / \\sqrt{n}} $$\n\nwhere \\( \\bar{X} \\) is the sample mean, \\( \\mu \\) is the population mean, and \\( \\sigma \\) is the standard deviation."
+        },
+        { 
+          "id": "3.5", 
+          "title": "Regression and Correlation",
+          "content": "Regression models the relationship between variables. The correlation coefficient \\( r \\) measures the strength of the linear relationship:\n\n$$ r = \\frac{\\sum (x_i - \\bar{x})(y_i - \\bar{y})}{\\sqrt{\\sum (x_i - \\bar{x})^2 \\sum (y_i - \\bar{y})^2}} $$"
+        }
       ]
     },
     {
       "title": "Linear Algebra",
       "subtopics": [
-        { "id": "4.1", "title": "Vector Spaces" },
-        { "id": "4.2", "title": "Basis and Dimension" },
-        { "id": "4.3", "title": "Eigenvalues and Eigenvectors" },
-        { "id": "4.4", "title": "Orthogonality and Least Squares" },
-        { "id": "4.5", "title": "Diagonalization and Similarity" }
+        { 
+          "id": "4.1", 
+          "title": "Vector Spaces",
+          "content": "A vector space is a collection of vectors that can be added and scaled. For example, \\( \\mathbb{R}^n \\) is a vector space where vectors are \\( n \\)-tuples of real numbers."
+        },
+        { 
+          "id": "4.2", 
+          "title": "Basis and Dimension",
+          "content": "A basis of a vector space is a set of linearly independent vectors that span the space. The dimension is the number of vectors in the basis. For example, \\( \\mathbb{R}^3 \\) has dimension 3."
+        },
+        { 
+          "id": "4.3", 
+          "title": "Eigenvalues and Eigenvectors",
+          "content": "An eigenvalue \\( \\lambda \\) and eigenvector \\( \\mathbf{v} \\) of a matrix \\( A \\) satisfy:\n\n$$ A \\mathbf{v} = \\lambda \\mathbf{v} $$\n\nEigenvalues and eigenvectors are used in stability analysis and transformations."
+        },
+        { 
+          "id": "4.4", 
+          "title": "Orthogonality and Least Squares",
+          "content": "Two vectors \\( \\mathbf{u} \\) and \\( \\mathbf{v} \\) are orthogonal if:\n\n$$ \\mathbf{u} \\cdot \\mathbf{v} = 0 $$\n\nOrthogonality is used in least squares regression to minimize errors."
+        },
+        { 
+          "id": "4.5", 
+          "title": "Diagonalization and Similarity",
+          "content": "A matrix \\( A \\) is diagonalizable if it can be written as:\n\n$$ A = PDP^{-1} $$\n\nwhere \\( D \\) is a diagonal matrix. Diagonalization simplifies matrix computations."
+        }
       ]
     },
     {
       "title": "Differential Equations",
       "subtopics": [
-        { "id": "5.1", "title": "First-Order Differential Equations" },
-        { "id": "5.2", "title": "Second-Order Differential Equations" },
-        { "id": "5.3", "title": "Systems of Differential Equations" },
-        { "id": "5.4", "title": "Laplace Transforms" },
-        { "id": "5.5", "title": "Fourier Series" }
+        { 
+          "id": "5.1", 
+          "title": "First-Order Differential Equations",
+          "content": "A first-order differential equation has the form:\n\n$$ \\frac{dy}{dx} = f(x, y) $$\n\nSolutions often involve separation of variables or integrating factors."
+        },
+        { 
+          "id": "5.2", 
+          "title": "Second-Order Differential Equations",
+          "content": "A second-order differential equation has the form:\n\n$$ a \\frac{d^2y}{dx^2} + b \\frac{dy}{dx} + c y = 0 $$\n\nSolutions involve characteristic equations and can be oscillatory or exponential."
+        },
+        { 
+          "id": "5.3", 
+          "title": "Systems of Differential Equations",
+          "content": "A system of differential equations involves multiple equations:\n\n$$ \\frac{dx}{dt} = f(x, y) $$\n\n$$ \\frac{dy}{dt} = g(x, y) $$\n\nSolutions often involve eigenvalues and eigenvectors."
+        },
+        { 
+          "id": "5.4", 
+          "title": "Laplace Transforms",
+          "content": "The Laplace transform of a function \\( f(t) \\) is:\n\n$$ \\mathcal{L}\\{f(t)\\}(s) = \\int_0^\\infty e^{-st} f(t) \\, dt $$\n\nIt is used to solve differential equations and analyze systems."
+        },
+        { 
+          "id": "5.5", 
+          "title": "Fourier Series",
+          "content": "A Fourier series represents a periodic function as a sum of sines and cosines:\n\n$$ f(x) = a_0 + \\sum_{n=1}^\\infty \\left( a_n \\cos(nx) + b_n \\sin(nx) \\right) $$\n\nIt is used in signal processing and heat transfer."
+        }
       ]
     },
     {
       "title": "Discrete Mathematics",
       "subtopics": [
-        { "id": "6.1", "title": "Logic and Proofs" },
-        { "id": "6.2", "title": "Set Theory" },
-        { "id": "6.3", "title": "Combinatorics" },
-        { "id": "6.4", "title": "Graph Theory" },
-        { "id": "6.5", "title": "Recurrence Relations" }
+        { 
+          "id": "6.1", 
+          "title": "Logic and Proofs",
+          "content": "Logic involves the study of valid reasoning. Common logical operators include AND (\\( \\land \\)), OR (\\( \\lor \\)), and NOT (\\( \\lnot \\)). Proofs use logical arguments to establish the truth of statements."
+        },
+        { 
+          "id": "6.2", 
+          "title": "Set Theory",
+          "content": "Set theory studies collections of objects. A set \\( A \\) is a collection of elements. Operations include union (\\( A \\cup B \\)), intersection (\\( A \\cap B \\)), and complement (\\( A^c \\))."
+        },
+        { 
+          "id": "6.3", 
+          "title": "Combinatorics",
+          "content": "Combinatorics studies counting and arrangement. The number of ways to choose \\( k \\) elements from \\( n \\) is:\n\n$$ \\binom{n}{k} = \\frac{n!}{k!(n-k)!} $$"
+        },
+        { 
+          "id": "6.4", 
+          "title": "Graph Theory",
+          "content": "Graph theory studies networks of nodes and edges. A graph \\( G = (V, E) \\) consists of vertices \\( V \\) and edges \\( E \\). Applications include network analysis and pathfinding."
+        },
+        { 
+          "id": "6.5", 
+          "title": "Recurrence Relations",
+          "content": "A recurrence relation defines a sequence recursively. For example, the Fibonacci sequence is:\n\n$$ F_n = F_{n-1} + F_{n-2} $$\n\nwith \\( F_0 = 0 \\) and \\( F_1 = 1 \\)."
+        }
       ]
     }
   ]
