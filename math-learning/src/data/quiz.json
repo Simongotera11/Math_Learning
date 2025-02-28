@@ -1,0 +1,280 @@
+{
+  "topics": [
+    {
+      "topic_id": 1,
+      "topic_title": "Vectors and Matrices",
+      "questions": [
+        {
+          "question": "What is the magnitude of the vector \\( \\mathbf{v} = (3, 4) \\)?",
+          "answers": [
+            "5",
+            "7",
+            "12",
+            "25"
+          ],
+          "correct_answer": 1
+        },
+        {
+          "question": "What is the result of the dot product of  \\( \\mathbf{a} = (1, 2) \\) and \\( \\mathbf{b} = (3, 4) \\)?",
+          "answers": [
+            "10",
+            "11",
+            "12",
+            "13"
+          ],
+          "correct_answer": 2
+        },
+        {
+          "question": "What is the determinant of the matrix  \\( \\begin{bmatrix} 2 & 3 \\\\ 1 & 4 \\end{bmatrix} \\)?",
+          "answers": [
+            "5",
+            "6",
+            "7",
+            "8"
+          ],
+          "correct_answer": 1
+        },
+        {
+          "question": "What is the cross product of  \\( \\mathbf{u} = (1, 0, 0) \\)  \\( \\mathbf{v} = (0, 1, 0) \\)?",
+          "answers": [
+            "(0, 0, 1)",
+            "(1, 1, 0)",
+            "(0, 1, 0)",
+            "(1, 0, 0)"
+          ],
+          "correct_answer": 1
+        }
+      ]
+    },
+    {
+      "topic_id": 2,
+      "topic_title": "Calculus",
+      "questions": [
+        {
+          "question": "What is the derivative of  \\( f(x) = x^2 \\)?",
+          "answers": [
+            "2x",
+            "x",
+            "2",
+            "x^3"
+          ],
+          "correct_answer": 1
+        },
+        {
+          "question": "What does the definite integral  \\( \\int_a^b f(x) \\, dx \\) represent?",
+          "answers": [
+            "The slope of the function at point ( a )",
+            "The area under the curve of   \\( f(x) \\) from \\( a \\) to \\( b \\)",
+            "The derivative of  \\( f(x) \\)",
+            "The limit of \\( f(x) \\) as \\( x \\) approaches \\( a \\)"
+          ],
+          "correct_answer": 2
+        },
+        {
+          "question": "What is the limit  \\( \\lim_{x \\to 0} \\frac{\\sin(x)}{x} \\)?",
+          "answers": [
+            "0",
+            "1",
+            "Infinity",
+            "Undefined"
+          ],
+          "correct_answer": 2
+        },
+        {
+          "question": "What is the chain rule used for?",
+          "answers": [
+            "Finding the area under a curve",
+            "Differentiating composite functions",
+            "Integrating functions",
+            "Finding limits"
+          ],
+          "correct_answer": 2
+        }
+      ]
+    },
+    {
+      "topic_id": 3,
+      "topic_title": "Probability and Statistics",
+      "questions": [
+        {
+          "question": "What is the probability of an event that is certain to happen?",
+          "answers": [
+            "0",
+            "0.5",
+            "1",
+            "2"
+          ],
+          "correct_answer": 3
+        },
+        {
+          "question": "What does the variance of a random variable measure?",
+          "answers": [
+            "The mean value",
+            "The spread of the data",
+            "The probability of an event",
+            "The correlation between variables"
+          ],
+          "correct_answer": 2
+        },
+        {
+          "question": "In hypothesis testing, what does the p-value represent?",
+          "answers": [
+            "The probability of the null hypothesis being true",
+            "The probability of the alternative hypothesis being true",
+            "The probability of observing the data if the null hypothesis is true",
+            "The probability of making a Type I error"
+          ],
+          "correct_answer": 3
+        },
+        {
+          "question": "What is the correlation coefficient range?",
+          "answers": [
+            "0 to 1",
+            "-1 to 1",
+            "0 to 100",
+            "-100 to 100"
+          ],
+          "correct_answer": 2
+        }
+      ]
+    },
+    {
+      "topic_id": 4,
+      "topic_title": "Linear Algebra",
+      "questions": [
+        {
+          "question": "What is the result of the dot product of two perpendicular vectors?",
+          "answers": [
+            "1",
+            "0",
+            "-1",
+            "The product of their magnitudes"
+          ],
+          "correct_answer": 2
+        },
+        {
+          "question": "What is the dimension of the vector space  \\( \\mathbb{R}^3 \\)?",
+          "answers": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ],
+          "correct_answer": 3
+        },
+        {
+          "question": "What is an eigenvector?",
+          "answers": [
+            "A vector that does not change direction under a linear transformation",
+            "A vector that changes direction under a linear transformation",
+            "A vector that is always orthogonal to another vector",
+            "A vector that has a magnitude of zero"
+          ],
+          "correct_answer": 1
+        },
+        {
+          "question": "What does it mean for two vectors to be orthogonal?",
+          "answers": [
+            "They have the same direction",
+            "They have the same magnitude",
+            "Their dot product is zero",
+            "Their cross product is zero"
+          ],
+          "correct_answer": 3
+        }
+      ]
+    },
+    {
+      "topic_id": 5,
+      "topic_title": "Differential Equations",
+      "questions": [
+        {
+          "question": "What is the order of the differential equation   \\( \\frac{d^2y}{dx^2} + 3\\frac{dy}{dx} + 2y = 0 \\)?",
+          "answers": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ],
+          "correct_answer": 2
+        },
+        {
+          "question": "What is a solution to the differential equation  \\( \\frac{dy}{dx} = y \\)?",
+          "answers": [
+            "y = x",
+            "y = e^x",
+            "y = x^2",
+            "y = \\ln(x)"
+          ],
+          "correct_answer": 2
+        },
+        {
+          "question": "What does the Laplace transform of a function   \\( f(t) \\) do?",
+          "answers": [
+            "Converts it to a polynomial",
+            "Converts it to a frequency domain representation",
+            "Finds its derivative",
+            "Solves it for specific initial conditions"
+          ],
+          "correct_answer": 2
+        },
+        {
+          "question": "What is the general solution to a first-order linear differential equation?",
+          "answers": [
+            "A polynomial",
+            "An exponential function",
+            "A trigonometric function",
+            "A logarithmic function"
+          ],
+          "correct_answer": 2
+        }
+      ]
+    },
+    {
+      "topic_id": 6,
+      "topic_title": "Discrete Mathematics",
+      "questions": [
+        {
+          "question": "What is the value of  \\( \\binom{5}{2} \\)?",
+          "answers": [
+            "5",
+            "10",
+            "15",
+            "20"
+          ],
+          "correct_answer": 2
+        },
+        {
+          "question": "What is the logical expression for 'A AND B'?",
+          "answers": [
+            "A or B",
+            "A and B",
+            "not A",
+            "A -> B"
+          ],
+          "correct_answer": 2
+        },
+        {
+          "question": "What is the number of edges in a complete graph with 4 vertices?",
+          "answers": [
+            "4",
+            "6",
+            "8",
+            "10"
+          ],
+          "correct_answer": 2
+        },
+        {
+          "question": "What is the Fibonacci sequence defined by?",
+          "answers": [
+            "F(n) = F(n-1) + F(n-2)",
+            "F(n) = F(n-1) * F(n-2)",
+            "F(n) = F(n-1) - F(n-2)",
+            "F(n) = F(n-1) / F(n-2)"
+          ],
+          "correct_answer": 1
+        }
+      ]
+    }
+  ]
+}

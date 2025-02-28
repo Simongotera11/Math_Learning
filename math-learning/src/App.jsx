@@ -3,12 +3,16 @@ import './App.css'
 import { Link } from 'react-router-dom'
 import HomePage from './pages/HomePage'
 import SingleTopicPage from './pages/SingleTopicPage';
+import PracticePage from './pages/PracticePage';
+import QuizPage from './pages/QuizPage';
 
 function App() {
    const router = createBrowserRouter(createRoutesFromElements(
       <Route >
        <Route index element={<HomePage />}></Route>
-        <Route path='/:id' element={<SingleTopicPage/>}></Route>
+       <Route path='/:id' element={<SingleTopicPage />}></Route>
+       <Route path='/practice' element={<PracticePage />}></Route>
+       <Route path='/practice/:id' element={<QuizPage/>}></Route>
        
         {/* <Route path='/jobs' element={<JobsPage />}></Route>
         

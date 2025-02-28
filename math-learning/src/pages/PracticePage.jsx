@@ -1,5 +1,5 @@
 import React from 'react'
-import TopicList from '../components/TopicList';
+import PracticeTopic from '../components/PracticeTopics'
 
 function PracticePage () {
   return (
@@ -7,7 +7,7 @@ function PracticePage () {
 	  <h1 className='text-2xl font-bold text-gray-800'>
 		What Would you Like to Practice Today?
 		  </h1>
-		  <TopicList></TopicList>
+			<PracticeTopic></PracticeTopic>
 		  
 		  
 	</div>
