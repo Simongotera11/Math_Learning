@@ -3,6 +3,7 @@ import jsonData from '../data/quiz.json';
 import { useParams } from 'react-router-dom';
 import katex from 'katex';
 import 'katex/dist/katex.min.css';
+import Grader from '../components/Grader';
 
  function findTopicById  (id) {
     const title = id.replace(/-/g, ' '); // Replace hyphens with spaces
@@ -10,7 +11,7 @@ import 'katex/dist/katex.min.css';
 };
 
 
-  const renderLatex = (text) => {
+const renderLatex = (text) => {
     // Split block math ($$...$$) first
     const blockParts = text.split('$$');
     return blockParts.map((part, index) => {
@@ -32,16 +33,23 @@ import 'katex/dist/katex.min.css';
         });
       }
     });
-  };
+};
+
+
 
 function QuizPage() {
   const { id } = useParams();
-  const [selectedAnswers, setSelectedAnswers] = useState({});
+	const [selectedAnswers, setSelectedAnswers] = useState({});
+	const [showResults, setShowResults] = useState(false);
 
   // Find the topic by ID (updated logic)
 	const selectedTopic = findTopicById(id);
+	
+	const handleSubmit = () => {
+    	setShowResults(true);
+	};
 
-  return (
+  return(
     <div className="max-w-2xl mx-auto p-4 sm:p-6 bg-gray-50 min-h-screen">
       {selectedTopic ? (
         <div>
@@ -93,12 +101,32 @@ function QuizPage() {
               </div>
             ))}
           </form>
+
+          {/* Submit Button */}
+          <div className="text-center mt-6">
+            <button
+              onClick={handleSubmit}
+              className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+            >
+              Submit Quiz
+            </button>
+          </div>
+
+          {/* Grader Component */}
+          {showResults && (
+            <Grader
+              questions={selectedTopic.questions}
+              selectedAnswers={selectedAnswers}
+            />
+          )}
         </div>
       ) : (
         <p className="text-center text-red-500">Topic not found</p>
       )}
     </div>
   );
+
+  
 }
 
 export default QuizPage;
