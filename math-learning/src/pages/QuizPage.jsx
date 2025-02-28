@@ -88,7 +88,7 @@ function QuizPage() {
                             [index]: i,
                           }))
                         }
-                        className="form-radio h-4 w-4 sm:h-5 sm:w-5 text-blue-600"
+                        className="form-radio h-4 w-4 sm:h-5 sm:w-5 text-green-700"
                       />
 
                       {/* Answer Text */}
@@ -106,7 +106,7 @@ function QuizPage() {
           <div className="text-center mt-6">
             <button
               onClick={handleSubmit}
-              className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+              className="bg-green-700 text-white px-6 py-2 rounded-lg hover:green-800 transition-colors cursor-pointer"
             >
               Submit Quiz
             </button>

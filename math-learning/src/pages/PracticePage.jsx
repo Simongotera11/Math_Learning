@@ -1,8 +1,5 @@
 import React from 'react'
 import PracticeTopic from '../components/PracticeTopics'
-import topicsData from '../data/topics.json';
-import { Link } from 'react-router-dom';
-import TopicList from '../components/TopicList';
 
 function PracticePage () {
  return (
