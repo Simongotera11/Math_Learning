@@ -44,16 +44,3 @@ const TopicList = () => {
 };
 
 export default TopicList;
-
-{/* <span className="w-4 h-4 border-2 border-green-700 rounded-full flex items-center justify-center">
-                      {selectedSubtopic === subtopic.id && (
-                        <span className="w-2 h-2 bg-green-700 rounded-full"></span>
-                      )}
-                    </span> */}
-                    {/* <Link ></Link> */}
-//  onClick={() => setSelectedSubtopic(subtopic.id)}
-// ${
-//                     //   selectedSubtopic === subtopic.id
-//                     //     ? "bg-green-100 text-green-700 font-semibold"
-//                     //     : "text-green-700 hover:bg-gray-100"
-//                     }

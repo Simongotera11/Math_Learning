@@ -6,7 +6,7 @@ import 'katex/dist/katex.min.css';
 import Grader from '../components/Grader';
 
 function findTopicById  (id) {
-    const title = id.replace(/-/g, ' '); // Replace hyphens with spaces
+    const title = id.replace(/-/g, ' '); // replaces hyphens with spaces
     return jsonData.topics.find(topic => topic.topic_title.toLowerCase() === title.toLowerCase());
 };
 
@@ -19,12 +19,12 @@ function renderLatex (text) {
         return <div key={index} dangerouslySetInnerHTML={{ 
           __html: katex.renderToString(part, { displayMode: true }) 
         }} />;
-      } else { // Handle inline math (\\(...\\)) in text
+      } else { // handle inline math (\\(...\\)) in text
         const inlineParts = part.split(/(\\\(|\\\))/g);
         return inlineParts.map((p, i) => {
           if (p === '\\(') {
             const latex = inlineParts[i + 1];
-            inlineParts.splice(i, 3); // Remove processed parts
+            inlineParts.splice(i, 3); // remove processed parts
             return <span key={i} dangerouslySetInnerHTML={{
               __html: katex.renderToString(latex)
             }} />;

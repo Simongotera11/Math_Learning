@@ -15,11 +15,11 @@ function App() {
   // Create the router configuration
   const router = createBrowserRouter(
     createRoutesFromElements(
-      <Route path="/" element={<MainLayout />}>
+      <Route path="/" element={<MainLayout />}> {/*this is the main layout of the app*/ }
         <Route index element={<HomePage />} />
-        <Route path="/:id" element={<SingleTopicPage />} />
+        <Route path="/:id" element={<SingleTopicPage />} /> { /*this is the page that explains the lessons dynamically*/ }
         <Route path="/practice" element={<PracticePage />} />
-        <Route path="/practice/:id" element={<QuizPage />} />
+        <Route path="/practice/:id" element={<QuizPage />} /> {/* this is the page that displays each quiz dynamically*/ }
       </Route>
     )
   );

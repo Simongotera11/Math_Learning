@@ -3,13 +3,14 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import { useState } from "react";
 import katex from "katex";
-import "katex/dist/katex.min.css"; // Import KaTeX CSS
+import "katex/dist/katex.min.css"; 
 import topicsData from "../data/topics.json";
 
 
 const renderContentWithLatex = (content) => {
   return content.split("\n\n").map((paragraph, index) => {
-    // Block Math ($$...$$)
+    // Math text ($$...$$)
+	// this render math text by spliting it the text
     if (paragraph.startsWith("$$") && paragraph.endsWith("$$")) {
       const latexExpression = paragraph.slice(2, -2);
       return (
@@ -23,7 +24,7 @@ const renderContentWithLatex = (content) => {
       );
     }
 
-    // Split for inline math ($...$ or \(...\))
+    // split for inline math ($...$ or \(...\))
     const parts = paragraph.split(/(\$.*?\$|\\\(.*?\\\))/g);
     return (
       <p key={index} className="text-gray-600">
@@ -69,7 +70,7 @@ function SingleTopicPage  ()  {
 
 	 return (
 		<div className="flex flex-col md:flex-row">  
-		{/* TopicList (Visible on Desktop, Toggleable on Mobile) */}
+		{/* topicList (visible on desktop, toggleable on mobile) */}
 		<div
 			className={`${isTopicListVisible ? 'block' : 'hidden'} md:block w-full md:w-1/4 bg-white shadow-md p-4`}
 		>
