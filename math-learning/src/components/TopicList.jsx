@@ -1,18 +1,17 @@
 import React, { useState } from "react";
 import topicsData from "../data/topics.json";
-// import SingleTopicPage from "../pages/SingleTopicPage";
 import { Link } from "react-router-dom";
+import { MdOutlineExpandMore ,MdOutlineExpandLess} from "react-icons/md";
 
 const TopicList = () => {
   const [expandedTopic, setExpandedTopic] = useState(null);
-  const [selectedSubtopic, setSelectedSubtopic] = useState(null);
-
-  const toggleTopic = (index) => {
+  
+  function toggleTopic  (index)  {
     setExpandedTopic(expandedTopic === index ? null : index);
 	};
 	
   return (
-    <div className="w-96 bg-white shadow-md p-4">
+    <div className="w-full bg-white shadow-md p-4">
       {topicsData.topics.map((topic, index) => (
         <div key={index} className="mb-2">
           {/* Topic Title */}
@@ -21,7 +20,7 @@ const TopicList = () => {
             onClick={() => toggleTopic(index)}
           >
             {topic.title}
-            <span>{expandedTopic === index ? "?" : "?"}</span>
+            <span>{expandedTopic === index ? <MdOutlineExpandLess /> : <MdOutlineExpandMore/>}</span>
           </button>
 
           {/* Subtopics List */}

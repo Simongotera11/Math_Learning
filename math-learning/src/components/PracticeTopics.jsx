@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import topicsData from "../data/topics.json";
-// import SingleTopicPage from "../pages/SingleTopicPage";
 import { Link } from "react-router-dom";
 
 function PracticeTopic () {	

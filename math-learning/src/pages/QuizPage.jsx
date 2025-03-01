@@ -5,13 +5,13 @@ import katex from 'katex';
 import 'katex/dist/katex.min.css';
 import Grader from '../components/Grader';
 
- function findTopicById  (id) {
+function findTopicById  (id) {
     const title = id.replace(/-/g, ' '); // Replace hyphens with spaces
     return jsonData.topics.find(topic => topic.topic_title.toLowerCase() === title.toLowerCase());
 };
 
 
-const renderLatex = (text) => {
+function renderLatex (text) {
     // Split block math ($$...$$) first
     const blockParts = text.split('$$');
     return blockParts.map((part, index) => {
@@ -41,11 +41,9 @@ function QuizPage() {
   const { id } = useParams();
 	const [selectedAnswers, setSelectedAnswers] = useState({});
 	const [showResults, setShowResults] = useState(false);
-
-  // Find the topic by ID (updated logic)
 	const selectedTopic = findTopicById(id);
 	
-	const handleSubmit = () => {
+	function handleSubmit  ()  {
     	setShowResults(true);
 	};
 

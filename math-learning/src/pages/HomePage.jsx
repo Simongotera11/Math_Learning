@@ -2,7 +2,7 @@ import React from "react";
 import TopicList from "../components/TopicList";
 import { FaArrowRight, FaArrowDown } from 'react-icons/fa';
 
-const HomePage = () => {
+function HomePage  ()  {
  return (
     <div className="flex flex-col md:flex-row h-screen bg-gray-100">
       {/* Left Side - Introduction */}

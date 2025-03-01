@@ -1,14 +1,19 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { FaBookOpen, FaBars, FaTimes } from 'react-icons/fa'; // Icons for title and hamburger menu
-
+import { FaBookOpen, FaBars, FaTimes } from 'react-icons/fa'; 
+import TopicList from './TopicList';
 function Navbar() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false); // State to manage mobile menu visibility
+	const [isMenuOpen, setIsMenuOpen] = useState(false); // State to manage mobile menu visibility
+	const [isLessonOpen, setIsLessonOpen] = useState(false);
 
   // Toggle mobile menu
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+  	function toggleMenu () {
+    	setIsMenuOpen(!isMenuOpen);
+	};
+	
+	function toggleLesson() {
+		setIsLessonOpen(!isLessonOpen);
+	}
 
   return (
     <nav className="bg-white shadow-md fixed w-full top-0 z-50">
@@ -68,7 +73,13 @@ function Navbar() {
                 onClick={toggleMenu}
               >
                 Practice
-              </Link>
+				</Link>
+				<button className='block text-gray-700 hover:text-green-700 px-3 py-2 rounded-md transition-colors duration-200'
+				onClick={toggleLesson}
+				>
+					Lessons	
+				</button>
+				{isLessonOpen&&<TopicList></TopicList>}	  
             </div>
           </div>
         )}
